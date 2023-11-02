@@ -9,6 +9,9 @@ import {BreakpointObserver} from '@angular/cdk/layout'
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
+  nameClient:String = '<Client-Name>'
+
+
 
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
