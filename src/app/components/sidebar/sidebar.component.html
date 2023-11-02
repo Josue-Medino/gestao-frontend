@@ -1,0 +1,45 @@
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav">
+    <img src="#" alt="Logo">
+    <h4>Medino</h4>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button  routerLink="/home">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-button  routerLink="/clients">
+      <mat-icon>bar_chart</mat-icon>
+      <span>Client</span>
+    </button>
+
+    <button mat-button  routerLink="/data">
+      <mat-icon>bar_chart</mat-icon>
+      <span>Chart</span>
+    </button>
+
+    <button mat-button  routerLink="/sales">
+      <mat-icon>attach_money</mat-icon>
+      <span>Money</span>
+    </button>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="content">
+      <mat-toolbar>
+        <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+
+          <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+          <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+
+        </button>
+        <span>Medino</span>
+    </mat-toolbar>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
