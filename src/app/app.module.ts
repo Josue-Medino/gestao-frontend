@@ -17,6 +17,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { ClientsComponent } from './components/clients/clients.component';
 import { SalesComponent } from './components/sales/sales.component';
 import { DataComponent } from './components/data/data.component';
+import { ActionHeaderComponent } from './components/action-header/action-header.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const ANGULAR_MATERIAL = [
   MatToolbarModule,
@@ -35,13 +37,15 @@ const ANGULAR_MATERIAL = [
     SidebarComponent,
     ClientsComponent,
     SalesComponent,
-    DataComponent
+    DataComponent,
+    ActionHeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutes,
     BrowserAnimationsModule,
-    ...ANGULAR_MATERIAL
+    ...ANGULAR_MATERIAL,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

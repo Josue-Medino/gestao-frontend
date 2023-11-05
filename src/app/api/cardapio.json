@@ -1,0 +1,20 @@
+{
+  "menu":[
+    { "nome": "Passa Carne", "preco": 15 },
+    { "nome": "Passa Frango", "preco": 15 },
+    { "nome": "Passa Misto", "preco": 15 },
+    { "nome": "Passa Carne c/ Bacon", "preco": 18 },
+    { "nome": "Passa Frango c/ Bacon", "preco": 18 },
+    { "nome": "Passa Misto c/ Bacon", "preco": 18 },
+    { "nome": "X-tudo", "preco": 20 },
+    { "nome": "X-bacon", "preco": 18 },
+    { "nome": "X-Calabresa", "preco": 16 },
+    { "nome": "X-frango", "preco": 16 },
+    { "nome": "X-filé", "preco": 20 },
+    { "nome": "Coca-lata", "preco": 5 },
+    { "nome": "Fanta-lata", "preco": 5 },
+    { "nome": "Guarana-lata", "preco": 5 },
+    { "nome": "Sprit-lata", "preco": 5 }
+  ]
+
+}

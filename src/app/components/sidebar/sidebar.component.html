@@ -1,9 +1,7 @@
 <mat-toolbar class="toolbar">
   <button mat-icon-button  (click)="sidenav.toggle()" class="toolbar-img" >
-
     <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
     <mat-icon *ngIf="sidenav.opened">close</mat-icon>
-
   </button>
   <span class="toolbar-title">{{nameClient}}</span>
   <a href="https://github.com/JosueMedino01 " target="_blank"> <img src="assets/github.png" alt="GitHub logo" class="toolbar-img"></a>

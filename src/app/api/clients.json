@@ -1,0 +1,28 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "nome": "Josue Medino",
+      "endereco": "R Jose Barbosa, 52",
+      "telefone": "82 9 8879-3826"
+    },
+    {
+      "nome": "Samuel Medino",
+      "endereco": "R dos cabacos",
+      "telefone": "82 9 8877 7788",
+      "id": 2
+    },
+    {
+      "nome": "Samuel Medino",
+      "endereco": "R dos cabacos",
+      "telefone": "82 9 8877 7788",
+      "id": 3
+    },
+    {
+      "nome": "Samuel Medino",
+      "endereco": "R dos cabacos",
+      "telefone": "82 9 8877 7788",
+      "id": 4
+    }
+  ]
+}
