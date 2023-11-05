@@ -32,37 +32,25 @@
   }
 }
 
-.sidenav-content{
-  height: 100%;
+.toolbar{
+  background-color:white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
 
-
-  &-toolbar{
-    background-color:white;
+  &-img{
+    height: 35px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    height: 50px;
-
-    &-img{
-      height: 35px;
-      display: flex;
-      align-items: center;
-    }
-
-
-
-    &-title{
-     font-size: 1.2rem;
-
-    }
-
   }
 
-  &-main{
-    margin: 0;
-    background-color: #efefef;
-    height: calc(100vh - 50px);
+
+
+  &-title{
+   font-size: 1.2rem;
+
   }
 }
 
@@ -73,31 +61,3 @@ mat-divider{
 }
 
 
-/*
-mat-toolbar{
-  background-color: #594848;
-  height: 50px;
-}
-
-
-{
-  width: 200px;
-  background-color: rgb(53, 53, 53);
-  color: white;
-}
-
-mat-sidenav-content{
-  background-color: rgb(185, 185, 185);
-
-}
-
-mat-sidenav-container{
-  height: 100vh;
-}
-
-*/
-
-.sidenav-container-content{
-  background-color: #efefef;
-  height: 100%;
-}

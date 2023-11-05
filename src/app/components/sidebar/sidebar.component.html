@@ -1,14 +1,15 @@
-<mat-toolbar class="sidenav-content-toolbar">
-  <button mat-icon-button  (click)="sidenav.toggle()" class="sidenav-content-toolbar-img" >
+<mat-toolbar class="toolbar">
+  <button mat-icon-button  (click)="sidenav.toggle()" class="toolbar-img" >
 
     <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
     <mat-icon *ngIf="sidenav.opened">close</mat-icon>
 
   </button>
-  <span class="sidenav-content-toolbar-title">{{nameClient}}</span>
-  <a href="https://github.com/JosueMedino01 " target="_blank"> <img src="assets/github.png" alt="GitHub logo" class="sidenav-content-toolbar-img"></a>
+  <span class="toolbar-title">{{nameClient}}</span>
+  <a href="https://github.com/JosueMedino01 " target="_blank"> <img src="assets/github.png" alt="GitHub logo" class="toolbar-img"></a>
 
 </mat-toolbar >
+
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #sidenav="matSidenav" class="sidenav">
     <img   src="assets/angular-icon.png" alt="Logo" class="sidenav-img">
@@ -20,8 +21,12 @@
       <mat-icon>home</mat-icon>
       <span>Home</span>
     </button>
+    <button mat-button  routerLink="/sales" class="sidenav-btn">
+      <mat-icon>attach_money</mat-icon>
+      <span>Sales</span>
+    </button>
     <button mat-button  routerLink="/clients" class="sidenav-btn">
-      <mat-icon>bar_chart</mat-icon>
+      <mat-icon>groups</mat-icon>
       <span>Client</span>
     </button>
 
@@ -30,19 +35,13 @@
       <span>Chart</span>
     </button>
 
-    <button mat-button  routerLink="/sales" class="sidenav-btn">
-      <mat-icon>attach_money</mat-icon>
-      <span>Money</span>
-    </button>
+
   </mat-sidenav>
 
   <mat-sidenav-content class="sidenav-content">
 
 
-
-    <div class="sidenav-content-main">
-      <router-outlet ></router-outlet>
-    </div>
+    <router-outlet ></router-outlet>
 
   </mat-sidenav-content>
 
