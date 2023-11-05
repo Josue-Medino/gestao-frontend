@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EMPTY, catchError } from 'rxjs';
 import { ClientesInterface } from 'src/app/interfaces/clientes-interface';
 import { ClientService } from 'src/app/services/client.service';
 
@@ -15,12 +16,12 @@ export class ClientsComponent {
   constructor(private clientService:ClientService){}
 
   newclient:ClientesInterface = {
-    "nome": "Samuel Medino",
-    "endereco": "R dos cabacos",
-    "telefone": "82 9 8877 7788"
+    nome: "Samuel Medino",
+    endereco: "R dos cabacos",
+    telefone: "82 9 8877 7788"
   };
 
-  adicionarClient() {
+  addClients() {
     this.clientService.addClient(this.newclient).subscribe(
       success => console.log('Success'),
       error => console.error('error', error),
@@ -28,4 +29,19 @@ export class ClientsComponent {
     )
   }
 
+  getClients(){
+    this.clientService.getClient()
+
+    .pipe(
+      catchError( error =>{
+        console.log("Error with Request!")
+        return EMPTY;
+      })
+    )
+
+    .subscribe(
+      clients => {
+        console.log(clients);
+    });
+  }
 }

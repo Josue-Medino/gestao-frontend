@@ -14,7 +14,7 @@ export class ClientService {
   }
 
   getClient(){
-
+    return this.httpClient.get<ClientesInterface[]>(this.url);
   }
 
   addClient( client:ClientesInterface){
