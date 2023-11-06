@@ -18,14 +18,15 @@ export class ClientsComponent {
   newclient:ClientesInterface = {
     nome: "Samuel Medino",
     endereco: "R dos cabacos",
-    telefone: "82 9 8877 7788"
+    telefone: "82 9 8877 7788",
+    id: 1
   };
 
   addClients() {
     this.clientService.addClient(this.newclient).subscribe(
       success => console.log('Success'),
       error => console.error('error', error),
-      () => console.log('Request Completed')
+      () => console.log('POST Completed')
     )
   }
 
@@ -44,4 +45,32 @@ export class ClientsComponent {
         console.log(clients);
     });
   }
+
+  removeClient(clientDell:string){
+
+    this.clientService.getClient()
+    .pipe(
+      catchError( error =>{
+        console.log("Error with Request!")
+        return EMPTY;
+      })
+    )
+
+    .subscribe(
+      clients => {
+        const clientToDelete = clients.find((client) => client.nome === clientDell);
+
+        if(clientToDelete){
+          this.clientService.removeClient(clientToDelete.id).subscribe(
+            success => console.log('Success'),
+            error => console.error('error', error),
+            () => console.log('DELETE  Completed')
+          )
+        }
+      });
+
+
+  }
 }
+
+

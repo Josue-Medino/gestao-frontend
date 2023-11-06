@@ -10,7 +10,7 @@ export class ClientService {
   readonly url:string;
 
   constructor(private httpClient:HttpClient) {
-    this.url = "http://localhost:3000/clients/"
+    this.url = "http://localhost:3000/clients"
   }
 
   getClient(){
@@ -21,8 +21,8 @@ export class ClientService {
     return this.httpClient.post(this.url, client).pipe(take(1));
   }
 
-  removeClient(){
-
+  removeClient(id:number){
+    return this.httpClient.delete(`${this.url}/${id}`);
   }
 
   updateClient(){

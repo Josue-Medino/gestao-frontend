@@ -1,30 +1,6 @@
 {
   "clients": [
     {
-      "id": 1,
-      "nome": "Josue Medino",
-      "endereco": "R Jose Barbosa, 52",
-      "telefone": "82 9 8879-3826"
-    },
-    {
-      "nome": "Samuel Medino",
-      "endereco": "R dos cabacos",
-      "telefone": "82 9 8877 7788",
-      "id": 2
-    },
-    {
-      "nome": "Samuel Medino",
-      "endereco": "R dos cabacos",
-      "telefone": "82 9 8877 7788",
-      "id": 3
-    },
-    {
-      "nome": "Samuel Medino",
-      "endereco": "R dos cabacos",
-      "telefone": "82 9 8877 7788",
-      "id": 4
-    },
-    {
       "nome": "Samuel Medino",
       "endereco": "R dos cabacos",
       "telefone": "82 9 8877 7788",
@@ -35,12 +11,6 @@
       "endereco": "R dos cabacos",
       "telefone": "82 9 8877 7788",
       "id": 6
-    },
-    {
-      "nome": "Samuel Medino",
-      "endereco": "R dos cabacos",
-      "telefone": "82 9 8877 7788",
-      "id": 7
     },
     {
       "nome": "Samuel Medino",
@@ -59,6 +29,24 @@
       "endereco": "R dos cabacos",
       "telefone": "82 9 8877 7788",
       "id": 10
+    },
+    {
+      "nome": "Samuel Medino",
+      "endereco": "R dos cabacos",
+      "telefone": "82 9 8877 7788",
+      "id": 11
+    },
+    {
+      "nome": "Samuel Medino",
+      "endereco": "R dos cabacos",
+      "telefone": "82 9 8877 7788",
+      "id": 12
+    },
+    {
+      "nome": "Samuel Medino",
+      "endereco": "R dos cabacos",
+      "telefone": "82 9 8877 7788",
+      "id": 1
     }
   ]
 }
