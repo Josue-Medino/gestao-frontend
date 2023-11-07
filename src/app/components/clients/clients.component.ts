@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { EMPTY, catchError } from 'rxjs';
 import { ClientesInterface } from 'src/app/interfaces/clientes-interface';
 import { ClientService } from 'src/app/services/client.service';
+import { DialogClientComponent } from '../dialog-client/dialog-client.component';
+
 
 @Component({
   selector: 'app-clients',
@@ -13,7 +16,10 @@ export class ClientsComponent {
   title: string = "Clientes";
   action:string = "Add"
 
-  constructor(private clientService:ClientService){}
+  constructor(
+    private clientService:ClientService,
+    public dialog: MatDialog,
+    ){}
 
   newclient:ClientesInterface = {
     nome: "Samuel Medino",
@@ -69,6 +75,19 @@ export class ClientsComponent {
       });
 
 
+  }
+
+
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogClientComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result){
+        console.log("Enviando dados do cliente ...");
+      } else {
+        console.log("Cancelado...");
+      }
+    });
   }
 }
 
