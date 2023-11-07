@@ -18,8 +18,7 @@ export class ClientsComponent {
   newclient:ClientesInterface = {
     nome: "Samuel Medino",
     endereco: "R dos cabacos",
-    telefone: "82 9 8877 7788",
-    id: 1
+    telefone: "82 9 8877 7788"
   };
 
   addClients() {

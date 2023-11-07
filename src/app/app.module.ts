@@ -18,6 +18,9 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { SalesComponent } from './components/sales/sales.component';
 import { DataComponent } from './components/data/data.component';
 import { ActionHeaderComponent } from './components/action-header/action-header.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
+//Requests
 import { HttpClientModule } from '@angular/common/http';
 
 const ANGULAR_MATERIAL = [
@@ -25,7 +28,8 @@ const ANGULAR_MATERIAL = [
   MatSidenavModule,
   MatIconModule,
   MatListModule,
-  MatButtonModule
+  MatButtonModule,
+  MatDialogModule
 ]
 
 

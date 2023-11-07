@@ -14,10 +14,10 @@ export class ClientService {
   }
 
   getClient(){
-    return this.httpClient.get<ClientesInterface[]>(this.url);
+    return this.httpClient.get<any[]>(this.url);
   }
 
-  addClient( client:ClientesInterface){
+  addClient( client:any){
     return this.httpClient.post(this.url, client).pipe(take(1));
   }
 
