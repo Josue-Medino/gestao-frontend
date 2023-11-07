@@ -21,19 +21,6 @@ export class ClientsComponent {
     public dialog: MatDialog,
     ){}
 
-  newclient:ClientesInterface = {
-    nome: "Samuel Medino",
-    endereco: "R dos cabacos",
-    telefone: "82 9 8877 7788"
-  };
-
-  addClients() {
-    this.clientService.addClient(this.newclient).subscribe(
-      success => console.log('Success'),
-      error => console.error('error', error),
-      () => console.log('POST Completed')
-    )
-  }
 
   getClients(){
     this.clientService.getClient()
@@ -79,15 +66,7 @@ export class ClientsComponent {
 
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogClientComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      if(result){
-        console.log("Enviando dados do cliente ...");
-      } else {
-        console.log("Cancelado...");
-      }
-    });
+   this.dialog.open(DialogClientComponent);
   }
 }
 
