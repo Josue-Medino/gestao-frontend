@@ -71,10 +71,8 @@ export class ClientsComponent implements AfterViewInit, OnInit{
     const dialogRef = this.dialog.open(DialogClientComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      if(result){
-        this.getClients();
-        alert("Alou")
-      }
+      //!!!AQUI ESTÁ ATUALIZANDO TODA VEZ QUE FECHAR, NÃO É O IDEAL
+      this.getClients();
     });
   }
 
