@@ -29,9 +29,9 @@ export class DialogClientComponent implements OnInit {
 
   onSubmit(){
     const newclient:ClientesInterface = {
-      nome: this.name?.value,
-      endereco:this.adress?.value,
-      telefone: this.phone?.value
+      name: this.name?.value,
+      adress:this.adress?.value,
+      phone: this.phone?.value
     };
 
     if(this.dataClients.status === "INVALID"){

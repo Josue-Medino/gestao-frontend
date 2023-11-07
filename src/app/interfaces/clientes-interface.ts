@@ -1,6 +1,6 @@
 export interface ClientesInterface {
-  nome:string;
-  endereco:string;
-  telefone:string;
+  name:string;
+  adress:string;
+  phone:string;
 
 }

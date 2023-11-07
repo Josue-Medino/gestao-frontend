@@ -16,6 +16,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 
 
 //Requests
@@ -41,7 +43,10 @@ const ANGULAR_MATERIAL = [
   MatDialogModule,
   MatFormFieldModule,
   MatSelectModule,
-  MatInputModule
+  MatInputModule,
+  MatPaginatorModule,
+  MatTableModule
+
 ]
 
 
@@ -65,7 +70,7 @@ const ANGULAR_MATERIAL = [
     ...ANGULAR_MATERIAL,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

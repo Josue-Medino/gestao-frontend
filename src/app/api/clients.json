@@ -1,82 +1,46 @@
 {
   "clients": [
     {
-      "nome": "Josue Medino",
-      "endereco": "R Jose Barbosa da Silva",
-      "telefone": "82 9 8879-3826",
+      "name": "Josue Medino",
+      "adress": "R Jose Barbosa",
+      "phone": " 82 9 8879 3826",
       "id": 1
     },
     {
-      "nome": "Samuel Medino",
-      "endereco": "R Jose Barbosa da Silva",
-      "telefone": "82 9 8827-7343",
+      "name": "Almir Lima",
+      "adress": "R Jose Barbosa da Silva, 52, Póximo a CEPAN",
+      "phone": "82 9 88277343",
       "id": 2
     },
     {
-      "nome": null,
-      "endereco": null,
-      "telefone": null,
+      "name": "Jackeline Medino",
+      "adress": "R Carteiro Jose Barbosa da Silva, 52",
+      "phone": "82 9 88237343",
       "id": 3
     },
     {
-      "nome": "Jackeline ",
-      "endereco": "R Jose Barbosa da Silva ",
-      "telefone": "82 9 88277343",
+      "name": "Samuel",
+      "adress": "Rua dos Academicos",
+      "phone": "28 5235 8475",
       "id": 4
     },
     {
-      "nome": null,
-      "endereco": null,
-      "telefone": null,
+      "name": "Adrielly",
+      "adress": "Rua das Academicas",
+      "phone": "02 8245 6574",
       "id": 5
     },
     {
-      "nome": null,
-      "endereco": null,
-      "telefone": null,
+      "name": "a",
+      "adress": "s",
+      "phone": "s",
       "id": 6
     },
     {
-      "nome": null,
-      "endereco": "A",
-      "telefone": "10",
+      "name": "Carlos",
+      "adress": "Rua Fluminense de Alcantra",
+      "phone": "00 000 0000",
       "id": 7
-    },
-    {
-      "nome": null,
-      "endereco": "D",
-      "telefone": "s",
-      "id": 8
-    },
-    {
-      "nome": "s",
-      "endereco": "D",
-      "telefone": "s",
-      "id": 9
-    },
-    {
-      "nome": null,
-      "endereco": null,
-      "telefone": null,
-      "id": 10
-    },
-    {
-      "nome": null,
-      "endereco": null,
-      "telefone": null,
-      "id": 11
-    },
-    {
-      "nome": "Carlos",
-      "endereco": "Rua dos cornos",
-      "telefone": "02 0000 1111",
-      "id": 12
-    },
-    {
-      "nome": "Alo",
-      "endereco": "a",
-      "telefone": "lo",
-      "id": 13
     }
   ]
 }

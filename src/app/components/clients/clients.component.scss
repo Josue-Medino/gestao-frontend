@@ -2,9 +2,20 @@
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+
   &-action{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    background-color: white;
+  }
+
+  &-table{
+    
     width: 95%;
   }
 }
