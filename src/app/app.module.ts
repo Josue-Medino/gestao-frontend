@@ -31,7 +31,6 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { SalesComponent } from './components/sales/sales.component';
 import { DataComponent } from './components/data/data.component';
 import { DialogClientComponent } from './components/dialog-client/dialog-client.component';
-import { ActionHeaderComponent } from './components/action-header/action-header.component';
 
 
 const ANGULAR_MATERIAL = [
@@ -59,7 +58,6 @@ const ANGULAR_MATERIAL = [
     ClientsComponent,
     SalesComponent,
     DataComponent,
-    ActionHeaderComponent,
     DialogClientComponent,
 
   ],

@@ -1,76 +1,28 @@
 {
   "clients": [
     {
-      "name": "Josue Medino",
-      "adress": "R Jose Barbosa",
-      "phone": " 82 9 8879 3826",
+      "name": "Ana Oliveira",
+      "adress": "Maceió-Al, Rua Amorin Cornelios, 524",
+      "phone": "00 9900 9090",
       "id": 1
     },
     {
-      "name": "Almir Lima",
-      "adress": "R Jose Barbosa da Silva, 52, Póximo a CEPAN",
-      "phone": "82 9 88277343",
+      "name": "Carlos Santos",
+      "adress": "São Paulo-SP, Av. Paulista, 123",
+      "phone": "11 9876 5432",
       "id": 2
     },
     {
-      "name": "Jackeline Medino",
-      "adress": "R Carteiro Jose Barbosa da Silva, 52",
-      "phone": "82 9 88237343",
+      "name": "Julia Costa",
+      "adress": "Rio de Janeiro-RJ, Rua da Praia, 789",
+      "phone": "21 5555 1234",
       "id": 3
     },
     {
-      "name": "Samuel",
-      "adress": "Rua dos Academicos",
-      "phone": "28 5235 8475",
+      "name": "Lucas Silva",
+      "adress": "Belo Horizonte-MG, Av. Getúlio Vargas, 456",
+      "phone": "31 8765 4321",
       "id": 4
-    },
-    {
-      "name": "Adrielly",
-      "adress": "Rua das Academicas",
-      "phone": "02 8245 6574",
-      "id": 5
-    },
-    {
-      "name": "e",
-      "adress": "e",
-      "phone": "e",
-      "id": 6
-    },
-    {
-      "name": "a",
-      "adress": "a",
-      "phone": "a",
-      "id": 7
-    },
-    {
-      "name": "alo",
-      "adress": "alo",
-      "phone": "alo",
-      "id": 8
-    },
-    {
-      "name": "a",
-      "adress": "a",
-      "phone": "a",
-      "id": 9
-    },
-    {
-      "name": "Josue",
-      "adress": "R dos canalhas",
-      "phone": "N/A",
-      "id": 10
-    },
-    {
-      "name": "A",
-      "adress": "a",
-      "phone": "a",
-      "id": 11
-    },
-    {
-      "name": "aaaaa",
-      "adress": "aa",
-      "phone": "a",
-      "id": 12
     }
   ]
 }

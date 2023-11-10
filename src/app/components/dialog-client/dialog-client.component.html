@@ -1,17 +1,17 @@
 <h2 mat-dialog-title>New Client</h2>
-<mat-dialog-content class="mat-typography">
-  <form [formGroup]="dataClients" >
-    <mat-form-field>
+<mat-dialog-content class="mat-typography" >
+  <form [formGroup]="dataClients" class="container">
+    <mat-form-field class="container-item">
       <mat-label for="name">Name</mat-label>
       <input matInput formControlName="name">
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field class="container-item">
       <mat-label for="adress">Adress</mat-label>
       <input matInput formControlName="adress">
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field class="container-item">
       <mat-label for="phone">Phone</mat-label>
       <input matInput formControlName="phone">
     </mat-form-field>
@@ -20,5 +20,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancel</button>
-  <button type="submit" mat-button [mat-dialog-close]="true"   cdkFocusInitial (click)="onSubmit()">Sign Up</button>
+  <button type="submit" mat-button   cdkFocusInitial (click)="onSubmit()">Sign Up</button>
 </mat-dialog-actions>

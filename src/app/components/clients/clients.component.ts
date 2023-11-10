@@ -46,19 +46,23 @@ export class ClientsComponent implements AfterViewInit, OnInit{
     .pipe(
       catchError( error =>{
         console.log("Error with Request!")
-        return EMPTY;
+          return EMPTY;
       })
     )
 
     .subscribe(
       clients => {
-        const clientToDelete = clients.find((client) => client.nome === clientDell);
+
+        const clientToDelete = clients.find((client) => client.name === clientDell);
 
         if(clientToDelete){
           this.clientService.removeClient(clientToDelete.id).subscribe(
             success => console.log('Success'),
             error => console.error('error', error),
-            () => console.log('DELETE  Completed')
+            () => {
+              console.log('DELETE  Completed')
+              this.getClients();
+            }
           )
         }
       });
@@ -84,7 +88,7 @@ export class ClientsComponent implements AfterViewInit, OnInit{
   }
 
  //TABLE
- displayedColumns: string[] = ['id', 'name', 'adress', 'phone'];
+ displayedColumns: string[] = ['id', 'name', 'adress', 'phone', 'actions'];
  dataSource = new MatTableDataSource<any>();
 
  @ViewChild(MatPaginator)
