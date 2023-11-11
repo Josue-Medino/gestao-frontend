@@ -70,6 +70,10 @@ export class ClientsComponent implements AfterViewInit, OnInit{
 
   }
 
+  updateClient(object:any){
+    alert("Ação em desenvolvimento...");
+    console.log(object);
+  }
 
   openDialog() {
     const dialogRef = this.dialog.open(DialogClientComponent);
