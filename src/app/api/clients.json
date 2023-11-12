@@ -1,12 +1,6 @@
 {
   "clients": [
     {
-      "name": "Ana Oliveira",
-      "adress": "Maceió-Al, Rua Amorin Cornelios, 524",
-      "phone": "00 9900 9090",
-      "id": 1
-    },
-    {
       "name": "Carlos Santos",
       "adress": "São Paulo-SP, Av. Paulista, 123",
       "phone": "11 9876 5432",
@@ -23,6 +17,12 @@
       "adress": "Belo Horizonte-MG, Av. Getúlio Vargas, 456",
       "phone": "31 8765 4321",
       "id": 4
+    },
+    {
+      "name": "Almir LIma",
+      "adress": "R Jose Barbosa",
+      "phone": "82 9 8827 7343",
+      "id": 5
     }
   ]
 }

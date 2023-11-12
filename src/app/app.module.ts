@@ -16,8 +16,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 //Requests
@@ -31,6 +32,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { SalesComponent } from './components/sales/sales.component';
 import { DataComponent } from './components/data/data.component';
 import { DialogClientComponent } from './components/dialog-client/dialog-client.component';
+import { DialogSalesComponent } from './components/dialog-sales/dialog-sales.component';
 
 
 const ANGULAR_MATERIAL = [
@@ -44,7 +46,8 @@ const ANGULAR_MATERIAL = [
   MatSelectModule,
   MatInputModule,
   MatPaginatorModule,
-  MatTableModule
+  MatTableModule,
+  MatAutocompleteModule
 
 ]
 
@@ -59,6 +62,7 @@ const ANGULAR_MATERIAL = [
     SalesComponent,
     DataComponent,
     DialogClientComponent,
+    DialogSalesComponent,
 
   ],
   imports: [

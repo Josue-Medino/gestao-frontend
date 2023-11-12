@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>New Sale</h2>
+<mat-dialog-content class="mat-typography" >
+  <form [formGroup]="dataSale" class="container">
+    
+    <mat-form-field>
+      <mat-label>QTD</mat-label>
+      <input matInput type="number">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Product</mat-label>
+      <input type="text"
+              matInput
+              [formControl]="control"
+              [matAutocomplete]="auto"
+      >
+
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+        <mat-option *ngFor="let product of filProducts  | async" [value]="product">
+          {{product}}
+        </mat-option>
+      </mat-autocomplete>
+
+    </mat-form-field>
+
+    <div>
+      valor
+    </div>
+
+
+  </form>
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button type="submit" mat-button   cdkFocusInitial (click)="onSubmit()">Sign Up</button>
+</mat-dialog-actions>
