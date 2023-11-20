@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable, map, startWith } from 'rxjs';
 import { ClientService } from 'src/app/services/client.service';
@@ -27,11 +27,17 @@ export class DialogSalesComponent implements OnInit{
 
   ngOnInit(){
     this.dataSale = new FormGroup ({
-      client: new FormControl("Josue"),
-      pedido: new FormControl({qtd: 2, produto: "X-Tudo", valor: 20}),
-      adicionais: new FormControl({descrição: "Entrega", valor: 3})
+      client: new FormControl(null),
+
+      qtd: new FormControl(null, Validators.required),
+      productChoose: this.control,
+      money: new FormControl(null, Validators.required),
+
+      //adicionais: new FormControl({descrição: "Entrega", valor: 3})
     });
 
+
+    //Filter to Autocomplete
     this.filProducts = this.control.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value))
@@ -48,8 +54,9 @@ export class DialogSalesComponent implements OnInit{
   }
 
   onSubmit(){
-    //console.log(this.dataSale);
+    console.log(this.dataSale);
 
+    return;
     this.dialog.closeAll();
   }
 
@@ -61,7 +68,9 @@ export class DialogSalesComponent implements OnInit{
 
 
 
-
+  get qtd(){return this.dataSale.get('qtd');}
+  get productChoose(){return this.dataSale.get('productChoose');}
+  get money(){return this.dataSale.get('money');}
 
 
 }
