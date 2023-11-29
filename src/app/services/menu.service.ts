@@ -8,7 +8,7 @@ export class MenuService {
   readonly url : string;
 
   constructor(private httpClient:HttpClient) {
-    this.url = "http://localhost:3000/menu"
+    this.url = "http://localhost:4000/menu"
   }
 
   getMenu(){

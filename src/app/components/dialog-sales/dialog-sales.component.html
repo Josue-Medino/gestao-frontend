@@ -23,15 +23,18 @@
       </mat-autocomplete>
 
     </mat-form-field>
+
+    <button mat-raised-button color="accent" (click)="getMoney()">Accent</button>
+
     <div >
       <p>Quantity: {{  qtd?.value }}</p>
       <p>Produt: {{  productChoose?.value }}</p>
-      <p>Money: {{money?.value}}</p>
+      <p>Money: {{money}}</p>
     </div>
 
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close>Cancel</button>
-      <button type="submit" mat-button   cdkFocusInitial >Sign Up</button>
+      <button type="submit" mat-button cdkFocusInitial >Sign Up</button>
     </mat-dialog-actions>
 
 

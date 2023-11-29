@@ -1,12 +1,6 @@
 {
   "clients": [
     {
-      "name": "Carlos Santos",
-      "adress": "São Paulo-SP, Av. Paulista, 123",
-      "phone": "11 9876 5432",
-      "id": 2
-    },
-    {
       "name": "Julia Costa",
       "adress": "Rio de Janeiro-RJ, Rua da Praia, 789",
       "phone": "21 5555 1234",
@@ -23,6 +17,12 @@
       "adress": "R Jose Barbosa",
       "phone": "82 9 8827 7343",
       "id": 5
+    },
+    {
+      "name": "Josue",
+      "adress": "R dos Caipira",
+      "phone": "0000000",
+      "id": 6
     }
   ]
 }
