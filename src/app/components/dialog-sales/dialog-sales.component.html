@@ -2,34 +2,65 @@
 <mat-dialog-content class="mat-typography" >
   <form [formGroup]="dataSale" class="container" (ngSubmit)="onSubmit()">
 
-    <mat-form-field>
-      <mat-label for="qtd">QTD</mat-label>
-      <input matInput type="number" formControlName="qtd">
-    </mat-form-field>
+    <div class="container">
+      <mat-form-field>
+        <mat-label for="qtd">QTD</mat-label>
+        <input matInput type="number" formControlName="qtd">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label for="productChoose">Product</mat-label>
+        <input  type="text"
+                matInput
+                [formControl]="control"
+                [matAutocomplete]="auto"
+        >
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let product of filProducts  | async" [value]="product">
+            {{product}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <button mat-raised-button color="accent" (click)="getMoney()">Accent</button>
+    </div>
 
-    <mat-form-field>
-      <mat-label for="productChoose">Product</mat-label>
-      <input  type="text"
+    <div class="table">
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
 
-              matInput
-              [formControl]="control"
-              [matAutocomplete]="auto"
-      >
+          <!-- Position Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
 
-      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-        <mat-option *ngFor="let product of filProducts  | async" [value]="product">
-          {{product}}
-        </mat-option>
-      </mat-autocomplete>
+          <!-- Name Column -->
+          <ng-container matColumnDef="product">
+            <th mat-header-cell *matHeaderCellDef> Product </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
 
-    </mat-form-field>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="qtd">
+            <th mat-header-cell *matHeaderCellDef> Qtd. </th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
 
-    <button mat-raised-button color="accent" (click)="getMoney()">Accent</button>
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef> Value </th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container>
 
-    <div >
-      <p>Quantity: {{  qtd?.value }}</p>
-      <p>Produt: {{  productChoose?.value }}</p>
-      <p>Money: {{money}}</p>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[7]"
+                       showFirstLastButtons
+                       aria-label="Select page of periodic elements">
+        </mat-paginator>
+      </div>
+
     </div>
 
     <mat-dialog-actions align="end">

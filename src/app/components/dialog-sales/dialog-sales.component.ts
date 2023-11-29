@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { Observable, map, startWith } from 'rxjs';
 import { ClientService } from 'src/app/services/client.service';
 import { MenuService } from 'src/app/services/menu.service';
@@ -90,6 +92,15 @@ export class DialogSalesComponent implements OnInit{
   get qtd(){return this.dataSale.get('qtd');}
   get productChoose(){return this.dataSale.get('productChoose');}
   //get money(){return this.dataSale.get('money');}
+
+  displayedColumns: string[] = ['position', 'product', 'qtd', 'value'];
+  dataSource = new MatTableDataSource<any>(this.menu);
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
 
 
 }
