@@ -14,11 +14,7 @@ export class SalesComponent {
   ) {}
 
   openDialog() {
-    const dialogRef = this.dialog.open(DialogSalesComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      
-    });
+    this.dialog.open(DialogSalesComponent);
   }
 
 }

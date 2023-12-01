@@ -23,6 +23,12 @@
       "adress": "R dos Caipira",
       "phone": "0000000",
       "id": 6
+    },
+    {
+      "name": "Samuel",
+      "adress": "R dos cabaco ",
+      "phone": "1354675",
+      "id": 7
     }
   ]
 }
