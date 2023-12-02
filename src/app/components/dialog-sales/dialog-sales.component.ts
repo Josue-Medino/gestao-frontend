@@ -67,12 +67,15 @@ export class DialogSalesComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.dataSale);
-
 
     this.newOrder.client = this.client?.value;
     console.log( this.newOrder );
 
+    this.salesService.postSale(this.newOrder).subscribe(
+      success => console.log('Success'),
+      error => console.error('error', error),
+      () => console.log('POST Completed')
+    );
     return;
     this.dialog.closeAll();
   }
@@ -105,8 +108,8 @@ export class DialogSalesComponent implements OnInit {
     this.money = productObject.preco;
 
     this.orderUpdate();
-    console.log(this.newOrder.client)
-    console.log(this.newOrder.order)
+    //console.log(this.newOrder.client)
+    //console.log(this.newOrder.order)
 
     //console.log(this.money);
   }
@@ -121,7 +124,7 @@ export class DialogSalesComponent implements OnInit {
     return this.dataSale.get('client');
   }
 
-  displayedColumns: string[] = ['nome', 'qtd', 'preco'];
+  displayedColumns: string[] = ['nome', 'qtd', 'preco', 'subTotal'];
   dataSource = new MatTableDataSource<any>(this.newOrder.order);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
