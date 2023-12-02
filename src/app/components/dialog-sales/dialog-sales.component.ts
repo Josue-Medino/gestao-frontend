@@ -71,7 +71,7 @@ export class DialogSalesComponent implements OnInit {
 
 
     this.newOrder.client = this.client?.value;
-    console.log( this.newOrder.client );
+    console.log( this.newOrder );
 
     return;
     this.dialog.closeAll();
@@ -121,8 +121,8 @@ export class DialogSalesComponent implements OnInit {
     return this.dataSale.get('client');
   }
 
-  displayedColumns: string[] = ['position', 'product', 'qtd', 'value'];
-  dataSource = new MatTableDataSource<any>(this.menu);
+  displayedColumns: string[] = ['nome', 'qtd', 'preco'];
+  dataSource = new MatTableDataSource<any>(this.newOrder.order);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -133,8 +133,10 @@ export class DialogSalesComponent implements OnInit {
 
 
   orderUpdate(){
-    let item = {name: this.productChoose?.value, preco:this.money}
+    let item = {nome: this.productChoose?.value, preco:this.money, qtd: this.qtd?.value, subTotal: this.money*this.qtd?.value}
     this.newOrder.order.push(item);
+
+    this.dataSource.data = [...this.newOrder.order];
   }
 
 
