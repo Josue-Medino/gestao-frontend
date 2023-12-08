@@ -13,6 +13,10 @@ export class SalesComponent {
     public dialog: MatDialog,
   ) {}
 
+  ngOnInit(){
+    this.openDialog();
+  }
+
   openDialog() {
     this.dialog.open(DialogSalesComponent);
   }

@@ -1,62 +1,41 @@
 {
   "sales": [
     {
-      "id": 1,
-      "client": "Josué Medino",
+      "client": "Neto",
       "order": [
         {
-          "nome": "Passa Carne",
-          "preco": 15
+          "nome": "Passa Carne c/ Bacon",
+          "preco": 18,
+          "qtd": 1,
+          "subTotal": 18
         },
         {
-          "nome": "Passa Frango c/ Bancon",
-          "preco": 18
-        }
-      ]
-    },
-    {
-      "client": "Josué Medino",
-      "order": [
-        {
-          "nome": "Passa Carne",
-          "preco": 15
-        },
-        {
-          "nome": "Passa Frango c/ Bancon",
-          "preco": 18
+          "nome": "X-filé",
+          "preco": 20,
+          "qtd": 1,
+          "subTotal": 20
         }
       ],
+      "id": 1
+    },
+    {
+      "client": "Almir",
+      "order": [
+        {
+          "nome": "X-tudo",
+          "preco": 20,
+          "qtd": 1,
+          "subTotal": 20
+        },
+        {
+          "nome": "Coca-lata",
+          "preco": 5,
+          "qtd": 1,
+          "subTotal": 5
+        }
+      ],
+      "total": 25,
       "id": 2
-    },
-    {
-      "client": "Drika",
-      "order": [
-        {
-          "nome": "X-tudo",
-          "preco": 20,
-          "qtd": 1,
-          "subTotal": 20
-        }
-      ],
-      "id": 3
-    },
-    {
-      "client": "Jo",
-      "order": [
-        {
-          "nome": "X-tudo",
-          "preco": 20,
-          "qtd": 1,
-          "subTotal": 20
-        },
-        {
-          "nome": "Passa Frango",
-          "preco": 15,
-          "qtd": 1,
-          "subTotal": 15
-        }
-      ],
-      "id": 4
     }
   ]
 }

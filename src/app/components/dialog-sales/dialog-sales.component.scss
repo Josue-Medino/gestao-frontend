@@ -1,0 +1,17 @@
+.container{
+
+  &-input{
+
+    &-client{
+      width: 100%;
+    }
+  }
+
+  &-order{
+    width: 100%;
+    &-qtd{
+      width: 20%;
+      background-color: red;
+    }
+  }
+}

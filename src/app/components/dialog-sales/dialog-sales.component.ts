@@ -30,6 +30,7 @@ export class DialogSalesComponent implements OnInit {
   newOrder = {
     client: "",
     order: [] as any[],
+    total: 0.0,
   };
 
   constructor(
@@ -138,6 +139,7 @@ export class DialogSalesComponent implements OnInit {
   orderUpdate(){
     let item = {nome: this.productChoose?.value, preco:this.money, qtd: this.qtd?.value, subTotal: this.money*this.qtd?.value}
     this.newOrder.order.push(item);
+    this.newOrder.total += this.money;
 
     this.dataSource.data = [...this.newOrder.order];
   }
