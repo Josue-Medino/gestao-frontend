@@ -1,23 +1,23 @@
 <h2 mat-dialog-title>New Sale</h2>
-<mat-dialog-content class="mat-typography" >
-  <form [formGroup]="dataSale" class="container" (ngSubmit)="onSubmit()">
+<mat-dialog-content class="mat-typography container" >
+  <form [formGroup]="dataSale" class="container-form" (ngSubmit)="onSubmit()">
 
-    <div class="container-input">
-      <mat-form-field class="container-input-client">
+    <div class="container-form-input">
+      <mat-form-field class="container-form-input-client">
         <mat-label for="client">Client</mat-label>
         <input matInput type="text" formControlName="client">
       </mat-form-field>
 
-      <div class="container-input-order">
+      <div class="container-form-input-order">
         
-        <mat-form-field  class="container-input-order-qtd">
+        <mat-form-field  class="container-form-input-order-qtd">
           <mat-label for="qtd">QTD</mat-label>
           <input matInput type="number" formControlName="qtd">
         </mat-form-field>
 
-        <mat-form-field class="container-input-order-menu">
+        <mat-form-field class="container-form-input-order-menu">
           <mat-label for="productChoose">Product</mat-label>
-          <input  type="text"
+          <input  type="text"input
                   matInput
                   [formControl]="control"
                   [matAutocomplete]="auto"
@@ -28,60 +28,56 @@
             </mat-option>
           </mat-autocomplete>
         </mat-form-field>
+        <button type="button" mat-raised-button color="accent" (click)="getMoney()" class="container-form-input-order-btn">Add</button>
       </div>
-      <button type="button" mat-raised-button color="accent" (click)="getMoney()" class="container-input-btn">Add</button>
+      
     </div>
-
-    <div class="table">
-      <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource">
-
-
-          <!-- Name Column -->
-          <ng-container matColumnDef="nome">
-            <th mat-header-cell *matHeaderCellDef> Product </th>
-            <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
-          </ng-container>
-
-          <!-- Weight Column -->
-          <ng-container matColumnDef="qtd">
-            <th mat-header-cell *matHeaderCellDef> Qtd. </th>
-            <td mat-cell *matCellDef="let element"> {{element.qtd}} </td>
-          </ng-container>
-
-          <!-- Symbol Column -->
-          <ng-container matColumnDef="preco">
-            <th mat-header-cell *matHeaderCellDef> Value </th>
-            <td mat-cell *matCellDef="let element"> {{element.preco}} </td>
-          </ng-container>
-
-           <!-- Name Column -->
-           <ng-container matColumnDef="subTotal">
-            <th mat-header-cell *matHeaderCellDef> Sub-Total </th>
-            <td mat-cell *matCellDef="let element"> {{element.subTotal}} </td>
-          </ng-container>
-
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-        </table>
-
-        <mat-paginator [pageSizeOptions]="[7]"
-                       showFirstLastButtons
-                       aria-label="Select page of periodic elements">
-        </mat-paginator>
-      </div>
-
-    </div>
-
-    <mat-dialog-actions align="end">
-      <button mat-button mat-dialog-close>Cancel</button>
-      <button type="submit" mat-button cdkFocusInitial >Sign Up</button>
-    </mat-dialog-actions>
-
 
   </form>
 
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
 
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Product </th>
+        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="qtd">
+        <th mat-header-cell *matHeaderCellDef> Qtd. </th>
+        <td mat-cell *matCellDef="let element"> {{element.qtd}} </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="preco">
+        <th mat-header-cell *matHeaderCellDef> Value </th>
+        <td mat-cell *matCellDef="let element"> {{element.preco}} </td>
+      </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="subTotal">
+        <th mat-header-cell *matHeaderCellDef> Sub-Total </th>
+        <td mat-cell *matCellDef="let element"> {{element.subTotal}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[7]"
+                    showFirstLastButtons
+                    aria-label="Select page of periodic elements">
+    </mat-paginator>
+  </div>
+
+
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button type="submit" mat-button cdkFocusInitial >Sign Up</button>
+  </mat-dialog-actions>
 
 
 </mat-dialog-content>

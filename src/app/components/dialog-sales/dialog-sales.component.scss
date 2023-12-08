@@ -1,17 +1,35 @@
 .container{
+  width: 50vw;
 
-  &-input{
+  &-form{
+    
+    &-input{
 
-    &-client{
-      width: 100%;
-    }
-  }
+      &-client{
+        width: 100%;
+      }
 
-  &-order{
-    width: 100%;
-    &-qtd{
-      width: 20%;
-      background-color: red;
+      &-order{
+        display: flex;
+        justify-content: space-between;
+
+
+        &-qtd{
+          min-width: 90px;
+          width: 12%;
+        }
+
+        &-menu{
+          width: 60%;
+        }
+
+        &-btn{
+          background-color: rgba(98, 255, 78, 0.795);
+          min-width: 80px;
+          height: 56px;
+          color: black;
+        }
+      }
     }
   }
 }
