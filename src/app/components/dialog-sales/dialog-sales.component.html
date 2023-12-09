@@ -33,6 +33,11 @@
       
     </div>
 
+    <mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button type="submit" mat-button cdkFocusInitial >Sign Up</button>
+    </mat-dialog-actions>
+
   </form>
 
   <div class="mat-elevation-z8">
@@ -67,17 +72,14 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[7]"
+    <mat-paginator [pageSizeOptions]="[5]"
                     showFirstLastButtons
                     aria-label="Select page of periodic elements">
     </mat-paginator>
   </div>
 
 
-  <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button type="submit" mat-button cdkFocusInitial >Sign Up</button>
-  </mat-dialog-actions>
+ 
 
 
 </mat-dialog-content>

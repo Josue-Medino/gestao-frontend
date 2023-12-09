@@ -24,6 +24,7 @@ export class SalesComponent {
       this.dataSales = data;
       console.log(this.dataSales);
       this.dataSource = new MatTableDataSource<any>(this.dataSales);
+      this.dataSource.paginator = this.paginator;
     })
 
   }
@@ -38,6 +39,5 @@ export class SalesComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
   }
 }

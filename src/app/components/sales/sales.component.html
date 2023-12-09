@@ -19,7 +19,7 @@
         <td mat-cell *matCellDef="let element"> 
           <ng-container *ngIf="element.order && element.order.length > 0">
             <div *ngFor="let item of element.order">
-              {{ item.nome }} - Quantity: {{ item.qtd }} - Subtotal: {{ item.subTotal | currency }}
+              {{ item.qtd }} - {{ item.nome }} - {{ item.subTotal | currency }}
             </div>
           </ng-container>
         </td>
@@ -36,7 +36,7 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+    <mat-paginator [pageSizeOptions]="[5]"
                    showFirstLastButtons
                    aria-label="Select page of periodic elements">
     </mat-paginator>
