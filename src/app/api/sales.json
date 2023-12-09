@@ -1,24 +1,6 @@
 {
   "sales": [
     {
-      "client": "Neto",
-      "order": [
-        {
-          "nome": "Passa Carne c/ Bacon",
-          "preco": 18,
-          "qtd": 1,
-          "subTotal": 18
-        },
-        {
-          "nome": "X-filé",
-          "preco": 20,
-          "qtd": 1,
-          "subTotal": 20
-        }
-      ],
-      "id": 1
-    },
-    {
       "client": "Almir",
       "order": [
         {
@@ -35,7 +17,7 @@
         }
       ],
       "total": 25,
-      "id": 2
+      "id": 1
     }
   ]
 }

@@ -12,8 +12,12 @@ export class SalesService {
     this.url = "http://localhost:5000/sales"
   }
 
- postSale(client: any){
-  return this.httpClient.post(this.url, client).pipe(take(1));
-}
+  postSale(client: any){
+    return this.httpClient.post(this.url, client).pipe(take(1));
+  }
+
+  getSale(){
+    return this.httpClient.get<any[]>(this.url);
+  }
 
 }
