@@ -20,12 +20,7 @@ export class SalesComponent {
 
   ngOnInit(){
     //this.openDialog();
-    this.salesService.getSale().subscribe(data => {
-      this.dataSales = data;
-      console.log(this.dataSales);
-      this.dataSource = new MatTableDataSource<any>(this.dataSales);
-      this.dataSource.paginator = this.paginator;
-    })
+    this.loadSales();
 
   }
 
@@ -39,5 +34,14 @@ export class SalesComponent {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngAfterViewInit() {
+  }
+
+  loadSales(){
+    this.salesService.getSale().subscribe(data => {
+      this.dataSales = data;
+      console.log(this.dataSales);
+      this.dataSource = new MatTableDataSource<any>(this.dataSales);
+      this.dataSource.paginator = this.paginator;
+    })
   }
 }

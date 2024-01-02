@@ -77,8 +77,9 @@ export class DialogSalesComponent implements OnInit {
       error => console.error('error', error),
       () => console.log('POST Completed')
     );
-    return;
+    
     this.dialog.closeAll();
+    return;
   }
 
   private _filter(value: string): string[] {

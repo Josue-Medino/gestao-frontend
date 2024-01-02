@@ -1,12 +1,6 @@
 {
   "clients": [
     {
-      "name": "Julia Costa",
-      "adress": "Rio de Janeiro-RJ, Rua da Praia, 789",
-      "phone": "21 5555 1234",
-      "id": 3
-    },
-    {
       "name": "Lucas Silva",
       "adress": "Belo Horizonte-MG, Av. Getúlio Vargas, 456",
       "phone": "31 8765 4321",
